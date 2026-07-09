@@ -1,17 +1,97 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>damlasaymaz</title>
+    <title>Çok Yakında!</title>
     <style>
-        h1 {color:rgb(24, 218, 24);}
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1e1e2f 0%, #111119 100%);
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .container {
+            padding: 2rem;
+            max-width: 600px;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        .loader {
+            width: 50px;
+            height: 50px;
+            border: 3px solid rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            border-top-color: #3498db;
+            animation: spin 1s ease-in-out infinite;
+            margin: 0 auto 2rem auto;
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            letter-spacing: 2px;
+            background: linear-gradient(45deg, #3498db, #8e44ad);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        p {
+            font-size: 1.2rem;
+            color: #a0a0b0;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        .divider {
+            width: 60px;
+            height: 4px;
+            background: #3498db;
+            margin: 0 auto;
+            border-radius: 2px;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 480px) {
+            h1 { font-size: 2.2rem; }
+            p { font-size: 1rem; }
+        }
     </style>
 </head>
 <body>
-    <div>Hello World</div>
-    <div>fatih çetin bir marka</div>
-    <h1>damla saymaz bir markadır</h1>
+
+    <div class="container">
+        <div class="loader"></div>
+        
+        <h1>Web Sitemiz Hazırlanıyor</h1>
+        
+        
+        <p>Sizlere daha iyi bir deneyim sunabilmek için arka planda harika şeyler inşa ediyoruz. Çok yakında buradayız!</p>
+        
+        
+        <div class="divider"></div>
+    </div>
 
 </body>
 </html>
